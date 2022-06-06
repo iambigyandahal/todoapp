@@ -24,7 +24,7 @@ const TodoContainer: React.FC = () => {
   }
 
   const addTodo = (todo: AddTodo) => {
-    let id = todoList[todoList.length-1].id+1;
+    let id = (todoList[todoList.length-1]) ? todoList[todoList.length-1].id+1 : 1;
     setTodoList([...todoList, { userId: userId, id: id, ...todo }]);
   }
 
